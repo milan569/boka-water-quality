@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, CircleMarker, Popup, Tooltip, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, CircleMarker, Tooltip, useMap } from 'react-leaflet';
 import { useEffect } from 'react';
 import { getFreshnessMeta, getOfficialStatusMeta } from '../utils/status.js';
 
@@ -66,17 +66,6 @@ export default function WaterMap({ sites, selectedSiteId, onSelectSite }) {
               <br />
               {status.label} · {freshness.label}
             </Tooltip>
-            <Popup>
-              <div className="map-popup">
-                <strong>{site.name}</strong>
-                <span>{site.municipality}</span>
-                <span>Status: {status.label}</span>
-                <span>Sample: {site.latest?.sample_date ?? 'Unknown'}</span>
-                <button type="button" onClick={() => onSelectSite(site.site_id)}>
-                  Open detail
-                </button>
-              </div>
-            </Popup>
           </CircleMarker>
         );
       })}
