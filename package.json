@@ -1,0 +1,21 @@
+{
+  "name": "boka-water-quality-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MVP PWA map for sea water quality monitoring in Boka Kotorska using mock data.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "leaflet": "latest",
+    "react-leaflet": "latest"
+  },
+  "devDependencies": {}
+}

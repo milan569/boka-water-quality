@@ -1,0 +1,210 @@
+[
+  {
+    "site_id": "kotor_city_beach",
+    "name": "Kotor City Beach",
+    "municipality": "Kotor",
+    "area": "Kotor",
+    "lat": 42.4269,
+    "lon": 18.7684,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "muo",
+    "name": "Muo",
+    "municipality": "Kotor",
+    "area": "Muo",
+    "lat": 42.4278,
+    "lon": 18.7587,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "prcanj",
+    "name": "Prčanj",
+    "municipality": "Kotor",
+    "area": "Prčanj",
+    "lat": 42.4561,
+    "lon": 18.7429,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "stoliv",
+    "name": "Stoliv",
+    "municipality": "Kotor",
+    "area": "Stoliv",
+    "lat": 42.4738,
+    "lon": 18.7052,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "dobrota",
+    "name": "Dobrota",
+    "municipality": "Kotor",
+    "area": "Dobrota",
+    "lat": 42.4592,
+    "lon": 18.7655,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "perast",
+    "name": "Perast",
+    "municipality": "Kotor",
+    "area": "Perast",
+    "lat": 42.4863,
+    "lon": 18.6992,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "risan",
+    "name": "Risan",
+    "municipality": "Kotor",
+    "area": "Risan",
+    "lat": 42.5152,
+    "lon": 18.6964,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "tivat_belane",
+    "name": "Tivat Belane",
+    "municipality": "Tivat",
+    "area": "Tivat",
+    "lat": 42.4264,
+    "lon": 18.7054,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "donja_lastva",
+    "name": "Donja Lastva",
+    "municipality": "Tivat",
+    "area": "Donja Lastva",
+    "lat": 42.4523,
+    "lon": 18.6838,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "porto_montenegro",
+    "name": "Porto Montenegro",
+    "municipality": "Tivat",
+    "area": "Porto Montenegro",
+    "lat": 42.4345,
+    "lon": 18.6929,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "plavi_horizonti",
+    "name": "Plavi Horizonti",
+    "municipality": "Tivat",
+    "area": "Luštica",
+    "lat": 42.3857,
+    "lon": 18.6842,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "krasici",
+    "name": "Krašići",
+    "municipality": "Tivat",
+    "area": "Luštica",
+    "lat": 42.4118,
+    "lon": 18.6408,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "herceg_novi",
+    "name": "Herceg Novi",
+    "municipality": "Herceg Novi",
+    "area": "Herceg Novi",
+    "lat": 42.4531,
+    "lon": 18.5378,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "meljine",
+    "name": "Meljine",
+    "municipality": "Herceg Novi",
+    "area": "Meljine",
+    "lat": 42.4544,
+    "lon": 18.5624,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "igalo",
+    "name": "Igalo",
+    "municipality": "Herceg Novi",
+    "area": "Igalo",
+    "lat": 42.4588,
+    "lon": 18.5138,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  },
+  {
+    "site_id": "budva_mogren",
+    "name": "Budva Mogren",
+    "municipality": "Budva",
+    "area": "Budva",
+    "lat": 42.2778,
+    "lon": 18.8334,
+    "source_ids": {
+      "morsko_dobro": null,
+      "portodimare": null
+    },
+    "active": true
+  }
+]

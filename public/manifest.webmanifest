@@ -1,0 +1,24 @@
+{
+  "name": "Boka Water Quality",
+  "short_name": "Boka Water",
+  "description": "Map-based MVP for official sea water quality status and contextual risk in Boka Kotorska.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4fbfd",
+  "theme_color": "#0f5f77",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/water-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/water-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
