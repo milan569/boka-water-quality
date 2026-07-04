@@ -1,4 +1,4 @@
-const CACHE_NAME = 'boka-water-quality-mvp-v1';
+const CACHE_NAME = 'boka-water-quality-mvp-v2';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
@@ -35,3 +35,4 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
