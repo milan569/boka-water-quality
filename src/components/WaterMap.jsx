@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, CircleMarker, Tooltip, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, CircleMarker, useMap } from 'react-leaflet';
 import { useEffect } from 'react';
 import { getFreshnessMeta, getOfficialStatusMeta } from '../utils/status.js';
 
@@ -60,13 +60,7 @@ export default function WaterMap({ sites, selectedSiteId, onSelectSite }) {
             eventHandlers={{
               click: () => onSelectSite(site.site_id)
             }}
-          >
-            <Tooltip direction="top" offset={[0, -8]} opacity={0.95}>
-              <strong>{site.name}</strong>
-              <br />
-              {status.label} · {freshness.label}
-            </Tooltip>
-          </CircleMarker>
+          />
         );
       })}
     </MapContainer>
