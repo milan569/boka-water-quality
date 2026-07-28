@@ -2,6 +2,20 @@
 
 The MVP uses static JSON files. A database can be added later if needed.
 
+## `dataset_metadata.json`
+
+Describes the complete published dataset.
+
+Fields:
+
+- `dataset_type`: `mock` or `real`.
+- `generated_at`: ISO datetime when the dataset was generated.
+- `measurements_through`: latest included sample date.
+- `source_name`: user-facing source name.
+- `source_url`: canonical source URL, if available.
+- `microbiology_units`: units used for microbiological values.
+- `disclaimer_cs`: Czech data-status message displayed in the UI.
+
 ## `bathing_sites.json`
 
 Represents a monitored bathing location.
@@ -33,16 +47,27 @@ Fields:
 - `site_id`: link to bathing site.
 - `sample_date`: date of sampling.
 - `published_at`: date when the result was published or imported.
+- `imported_at`: ISO datetime of ingestion for real source records.
 - `official_class`: one of `excellent`, `good`, `satisfactory`, `poor`, `unknown`.
+- `official_class_original`: original source label.
+- `official_class_weight`: source class 1–4, if available.
 - `ecoli`: E. coli value, if available.
+- `ecoli_unit`: unit supplied by the source.
 - `enterococci`: intestinal enterococci value, if available.
+- `enterococci_unit`: unit supplied by the source.
 - `sea_temperature`: sea temperature in Celsius, if available.
 - `air_temperature`: air temperature in Celsius, if available.
 - `salinity`: salinity, if available.
 - `ph`: pH, if available.
 - `notes`: free text notes.
 - `source_url`: URL to the source.
+- `source_site_id`: external monitoring-site identifier.
+- `source_measurement_id`: external measurement identifier.
 - `raw_source`: `mock`, `morsko_dobro`, etc.
+
+The current Morsko dobro JSON endpoint does not expose numeric `ecoli` or
+`enterococci` values. Both fields are therefore `null`; the official class is
+copied directly from the source.
 
 ## `weather_context.json`
 
@@ -61,6 +86,11 @@ Fields:
 - `wave_height_optional`: wave height if available.
 - `local_incident_flag`: temporary mock flag for future incident monitoring.
 - `source`: source name.
+- `source_url`: attribution link.
+- `attribution`: required source/licence credit.
+- `weather_reference_time`: local reference time returned by the API.
+- `wind_direction_degrees`: original numeric direction before conversion.
+- `weather_code`: current WMO weather code.
 
 ## Contextual risk
 

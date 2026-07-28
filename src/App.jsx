@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import sites from './data/bathing_sites.json';
 import measurements from './data/measurements.json';
 import weatherContext from './data/weather_context.json';
+import datasetMetadata from './data/dataset_metadata.json';
 import WaterMap from './components/WaterMap.jsx';
 import SiteDetail from './components/SiteDetail.jsx';
 import Legend from './components/Legend.jsx';
@@ -29,14 +30,21 @@ export default function App() {
     <main className="app-shell">
       <header className="topbar">
         <div>
-          <p className="eyebrow">Boka Kotorska MVP</p>
-          <h1>Sea water quality map</h1>
+          <p className="eyebrow">Boka Kotorska · MVP</p>
+          <h1>Mapa kvality mořské vody</h1>
         </div>
-        <p className="data-note">Mock data only · official importer not connected yet</p>
+        <div className="data-note" role="note">
+          <strong>
+            {datasetMetadata.dataset_type === 'mock'
+              ? 'Pouze demonstrační data'
+              : datasetMetadata.source_name}
+          </strong>
+          <span>{datasetMetadata.disclaimer_cs}</span>
+        </div>
       </header>
 
       <section className="layout">
-        <div className="map-panel" aria-label="Water quality map">
+        <div className="map-panel" aria-label="Mapa kvality vody">
           <WaterMap
             sites={siteSummaries}
             selectedSiteId={selectedSite?.site_id}

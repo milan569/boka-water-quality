@@ -1,0 +1,60 @@
+name: Update official bathing-water data
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: Season year
+        required: true
+        default: '2026'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-official-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Import target municipalities from JP Morsko dobro
+        run: npm run import:morsko -- --year=${{ inputs.year }}
+
+      - name: Update Open-Meteo context
+        run: npm run update:weather
+
+      - name: Validate data
+        run: npm run validate:data
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Commit verified dataset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data raw/morsko_dobro
+          if git diff --cached --quiet; then
+            echo "No official-data changes to commit."
+          else
+            git commit -m "Update JP Morsko dobro data"
+            git push
+          fi
