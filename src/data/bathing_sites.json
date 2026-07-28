@@ -1,210 +1,1217 @@
 [
   {
-    "site_id": "kotor_city_beach",
-    "name": "Kotor City Beach",
+    "site_id": "morsko_dobro_116",
+    "name": "Morinj 01",
     "municipality": "Kotor",
-    "area": "Kotor",
-    "lat": 42.4269,
-    "lon": 18.7684,
+    "area": "MORINJ",
+    "lat": 42.4889736,
+    "lon": 18.6517391,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 116,
       "portodimare": null
     },
+    "official_site_name": "Morinj 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "muo",
-    "name": "Muo",
+    "site_id": "morsko_dobro_123",
+    "name": "RISAN 02",
     "municipality": "Kotor",
-    "area": "Muo",
-    "lat": 42.4278,
-    "lon": 18.7587,
+    "area": "RISAN",
+    "lat": 42.5168639,
+    "lon": 18.6896037,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 123,
       "portodimare": null
     },
+    "official_site_name": "RISAN 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "prcanj",
-    "name": "Prčanj",
+    "site_id": "morsko_dobro_77",
+    "name": "Perast 01",
     "municipality": "Kotor",
-    "area": "Prčanj",
-    "lat": 42.4561,
-    "lon": 18.7429,
+    "area": "PERAST",
+    "lat": 42.4883917,
+    "lon": 18.6940235,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 77,
       "portodimare": null
     },
+    "official_site_name": "Perast 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "stoliv",
-    "name": "Stoliv",
+    "site_id": "morsko_dobro_76",
+    "name": "Perast 02",
     "municipality": "Kotor",
-    "area": "Stoliv",
-    "lat": 42.4738,
-    "lon": 18.7052,
+    "area": "PERAST",
+    "lat": 42.4837175,
+    "lon": 18.7059262,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 76,
       "portodimare": null
     },
+    "official_site_name": "Perast 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "dobrota",
-    "name": "Dobrota",
+    "site_id": "morsko_dobro_75",
+    "name": "Bajova kula",
     "municipality": "Kotor",
-    "area": "Dobrota",
-    "lat": 42.4592,
-    "lon": 18.7655,
+    "area": "DRAŽIN VRT",
+    "lat": 42.4833185,
+    "lon": 18.7350592,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 75,
       "portodimare": null
     },
+    "official_site_name": "Bajova kula",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "perast",
-    "name": "Perast",
+    "site_id": "morsko_dobro_74",
+    "name": "Orahovac 01",
     "municipality": "Kotor",
-    "area": "Perast",
-    "lat": 42.4863,
-    "lon": 18.6992,
+    "area": "ORAHOVAC",
+    "lat": 42.4893294,
+    "lon": 18.7562347,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 74,
       "portodimare": null
     },
+    "official_site_name": "Orahovac 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "risan",
-    "name": "Risan",
+    "site_id": "morsko_dobro_73",
+    "name": "Sveti Stasija",
     "municipality": "Kotor",
-    "area": "Risan",
-    "lat": 42.5152,
-    "lon": 18.6964,
+    "area": "DOBROTA",
+    "lat": 42.4661652,
+    "lon": 18.7625751,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 73,
       "portodimare": null
     },
+    "official_site_name": "Sveti Stasija",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "tivat_belane",
-    "name": "Tivat Belane",
+    "site_id": "morsko_dobro_72",
+    "name": "Sveti Matija",
+    "municipality": "Kotor",
+    "area": "DOBROTA",
+    "lat": 42.4412998,
+    "lon": 18.7611734,
+    "source_ids": {
+      "morsko_dobro": 72,
+      "portodimare": null
+    },
+    "official_site_name": "Sveti Matija",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_119",
+    "name": "Dobrota 04",
+    "municipality": "Kotor",
+    "area": "DOBROTA",
+    "lat": 42.438693,
+    "lon": 18.7630975,
+    "source_ids": {
+      "morsko_dobro": 119,
+      "portodimare": null
+    },
+    "official_site_name": "Dobrota 04",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_79",
+    "name": "Žuta plaža 01",
+    "municipality": "Kotor",
+    "area": "ZUTA PLAZA",
+    "lat": 42.4296257,
+    "lon": 18.7672902,
+    "source_ids": {
+      "morsko_dobro": 79,
+      "portodimare": null
+    },
+    "official_site_name": "Žuta plaža 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_115",
+    "name": "Prcanj 01",
+    "municipality": "Kotor",
+    "area": "PRČANJ",
+    "lat": 42.4422692,
+    "lon": 18.7556221,
+    "source_ids": {
+      "morsko_dobro": 115,
+      "portodimare": null
+    },
+    "official_site_name": "Prcanj 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_81",
+    "name": "Markov Rt",
+    "municipality": "Kotor",
+    "area": "MARKOV RT",
+    "lat": 42.4661102,
+    "lon": 18.7323275,
+    "source_ids": {
+      "morsko_dobro": 81,
+      "portodimare": null
+    },
+    "official_site_name": "Markov Rt",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_114",
+    "name": "Stoliv 01",
+    "municipality": "Kotor",
+    "area": "STOLIV",
+    "lat": 42.4751837,
+    "lon": 18.701329,
+    "source_ids": {
+      "morsko_dobro": 114,
+      "portodimare": null
+    },
+    "official_site_name": "Stoliv 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_71",
+    "name": "Platamuni 01",
+    "municipality": "Kotor",
+    "area": "PLATAMUNI",
+    "lat": 42.2690493,
+    "lon": 18.785193,
+    "source_ids": {
+      "morsko_dobro": 71,
+      "portodimare": null
+    },
+    "official_site_name": "Platamuni 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_70",
+    "name": "Trsteno",
+    "municipality": "Kotor",
+    "area": "TRSTENO",
+    "lat": 42.2814349,
+    "lon": 18.7853837,
+    "source_ids": {
+      "morsko_dobro": 70,
+      "portodimare": null
+    },
+    "official_site_name": "Trsteno",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_90",
+    "name": "Opatovo 01",
     "municipality": "Tivat",
-    "area": "Tivat",
-    "lat": 42.4264,
-    "lon": 18.7054,
+    "area": "OPATOVO",
+    "lat": 42.4596619,
+    "lon": 18.6811555,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 90,
       "portodimare": null
     },
+    "official_site_name": "Opatovo 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "donja_lastva",
-    "name": "Donja Lastva",
+    "site_id": "morsko_dobro_89",
+    "name": "Donja Lastva 01",
     "municipality": "Tivat",
-    "area": "Donja Lastva",
-    "lat": 42.4523,
-    "lon": 18.6838,
+    "area": "DONJA LASTVA",
+    "lat": 42.4412534,
+    "lon": 18.6859375,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 89,
       "portodimare": null
     },
+    "official_site_name": "Donja Lastva 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "porto_montenegro",
-    "name": "Porto Montenegro",
+    "site_id": "morsko_dobro_88",
+    "name": "Seljanovo 01",
     "municipality": "Tivat",
-    "area": "Porto Montenegro",
-    "lat": 42.4345,
-    "lon": 18.6929,
+    "area": "SELJANOVO",
+    "lat": 42.4389307,
+    "lon": 18.6849585,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 88,
       "portodimare": null
     },
+    "official_site_name": "Seljanovo 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "plavi_horizonti",
-    "name": "Plavi Horizonti",
+    "site_id": "morsko_dobro_87",
+    "name": "Gradska plaža 01",
     "municipality": "Tivat",
-    "area": "Luštica",
-    "lat": 42.3857,
-    "lon": 18.6842,
+    "area": "GRADSKA PLAZA TIVAT",
+    "lat": 42.4276556,
+    "lon": 18.6983798,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 87,
       "portodimare": null
     },
+    "official_site_name": "Gradska plaža 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "krasici",
-    "name": "Krašići",
+    "site_id": "morsko_dobro_86",
+    "name": "Kalardovo 01",
     "municipality": "Tivat",
-    "area": "Luštica",
-    "lat": 42.4118,
-    "lon": 18.6408,
+    "area": "KALARDOVO",
+    "lat": 42.4066928,
+    "lon": 18.7116576,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 86,
       "portodimare": null
     },
+    "official_site_name": "Kalardovo 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "herceg_novi",
-    "name": "Herceg Novi",
+    "site_id": "morsko_dobro_85",
+    "name": "Solila 01",
+    "municipality": "Tivat",
+    "area": "SOLILA",
+    "lat": 42.3939932,
+    "lon": 18.7047274,
+    "source_ids": {
+      "morsko_dobro": 85,
+      "portodimare": null
+    },
+    "official_site_name": "Solila 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_84",
+    "name": "Krašići 01",
+    "municipality": "Tivat",
+    "area": "Krašići",
+    "lat": 42.4122336,
+    "lon": 18.6450552,
+    "source_ids": {
+      "morsko_dobro": 84,
+      "portodimare": null
+    },
+    "official_site_name": "Krašići 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_83",
+    "name": "Oblatno 01",
+    "municipality": "Tivat",
+    "area": "OBLATNO",
+    "lat": 42.3824533,
+    "lon": 18.6533932,
+    "source_ids": {
+      "morsko_dobro": 83,
+      "portodimare": null
+    },
+    "official_site_name": "Oblatno 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_124",
+    "name": "VELJA ŠPILJA",
+    "municipality": "Tivat",
+    "area": "VELJA ŠPILJA",
+    "lat": 42.3856632,
+    "lon": 18.6670436,
+    "source_ids": {
+      "morsko_dobro": 124,
+      "portodimare": null
+    },
+    "official_site_name": "VELJA ŠPILJA",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_82",
+    "name": "Uvala Pržno",
+    "municipality": "Tivat",
+    "area": "UVALA PRZNO",
+    "lat": 42.3852116,
+    "lon": 18.6830663,
+    "source_ids": {
+      "morsko_dobro": 82,
+      "portodimare": null
+    },
+    "official_site_name": "Uvala Pržno",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_62",
+    "name": "Rose",
     "municipality": "Herceg Novi",
-    "area": "Herceg Novi",
-    "lat": 42.4531,
-    "lon": 18.5378,
+    "area": "ROSE",
+    "lat": 42.4288135,
+    "lon": 18.5554132,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 62,
       "portodimare": null
     },
+    "official_site_name": "Rose",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "meljine",
-    "name": "Meljine",
+    "site_id": "morsko_dobro_63",
+    "name": "Dobreč",
     "municipality": "Herceg Novi",
-    "area": "Meljine",
-    "lat": 42.4544,
-    "lon": 18.5624,
+    "area": "DOBREC",
+    "lat": 42.4121916,
+    "lon": 18.5584612,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 63,
       "portodimare": null
     },
+    "official_site_name": "Dobreč",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "igalo",
-    "name": "Igalo",
+    "site_id": "morsko_dobro_64",
+    "name": "Žanjice",
     "municipality": "Herceg Novi",
-    "area": "Igalo",
-    "lat": 42.4588,
-    "lon": 18.5138,
+    "area": "ZANJICE",
+    "lat": 42.3992455,
+    "lon": 18.5796156,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 64,
       "portodimare": null
     },
+    "official_site_name": "Žanjice",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   },
   {
-    "site_id": "budva_mogren",
-    "name": "Budva Mogren",
+    "site_id": "morsko_dobro_65",
+    "name": "Mirišta",
+    "municipality": "Herceg Novi",
+    "area": "MIRISTA",
+    "lat": 42.394889,
+    "lon": 18.5786003,
+    "source_ids": {
+      "morsko_dobro": 65,
+      "portodimare": null
+    },
+    "official_site_name": "Mirišta",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_66",
+    "name": "Njivice 01",
+    "municipality": "Herceg Novi",
+    "area": "NJIVICE",
+    "lat": 42.4337937,
+    "lon": 18.5181126,
+    "source_ids": {
+      "morsko_dobro": 66,
+      "portodimare": null
+    },
+    "official_site_name": "Njivice 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_67",
+    "name": "Blatna plaža 01",
+    "municipality": "Herceg Novi",
+    "area": "BLATNA PLAZA",
+    "lat": 42.452201,
+    "lon": 18.5062801,
+    "source_ids": {
+      "morsko_dobro": 67,
+      "portodimare": null
+    },
+    "official_site_name": "Blatna plaža 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_68",
+    "name": "Igalo 01",
+    "municipality": "Herceg Novi",
+    "area": "IGALO",
+    "lat": 42.4536759,
+    "lon": 18.5079966,
+    "source_ids": {
+      "morsko_dobro": 68,
+      "portodimare": null
+    },
+    "official_site_name": "Igalo 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_69",
+    "name": "Igalo 02",
+    "municipality": "Herceg Novi",
+    "area": "IGALO",
+    "lat": 42.4566764,
+    "lon": 18.5123793,
+    "source_ids": {
+      "morsko_dobro": 69,
+      "portodimare": null
+    },
+    "official_site_name": "Igalo 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_61",
+    "name": "Igalo 03",
+    "municipality": "Herceg Novi",
+    "area": "IGALO",
+    "lat": 42.458146,
+    "lon": 18.5157389,
+    "source_ids": {
+      "morsko_dobro": 61,
+      "portodimare": null
+    },
+    "official_site_name": "Igalo 03",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_60",
+    "name": "Novosadsko kupalište 01",
+    "municipality": "Herceg Novi",
+    "area": "NOVOSADSKO KUPALISTE",
+    "lat": 42.4576679,
+    "lon": 18.5195735,
+    "source_ids": {
+      "morsko_dobro": 60,
+      "portodimare": null
+    },
+    "official_site_name": "Novosadsko kupalište 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_117",
+    "name": "Milašinovića plaža",
+    "municipality": "Herceg Novi",
+    "area": "MILAŠINOVIĆA PLAŽA",
+    "lat": 42.455904,
+    "lon": 18.5236968,
+    "source_ids": {
+      "morsko_dobro": 117,
+      "portodimare": null
+    },
+    "official_site_name": "Milašinovića plaža",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_59",
+    "name": "Topla 01",
+    "municipality": "Herceg Novi",
+    "area": "TOPLA",
+    "lat": 42.4543129,
+    "lon": 18.525118,
+    "source_ids": {
+      "morsko_dobro": 59,
+      "portodimare": null
+    },
+    "official_site_name": "Topla 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_58",
+    "name": "Topla 02",
+    "municipality": "Herceg Novi",
+    "area": "TOPLA",
+    "lat": 42.4515697,
+    "lon": 18.5301039,
+    "source_ids": {
+      "morsko_dobro": 58,
+      "portodimare": null
+    },
+    "official_site_name": "Topla 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_57",
+    "name": "Ćorovića plaža 01",
+    "municipality": "Herceg Novi",
+    "area": "COROVICA PLAZA",
+    "lat": 42.4491387,
+    "lon": 18.5476019,
+    "source_ids": {
+      "morsko_dobro": 57,
+      "portodimare": null
+    },
+    "official_site_name": "Ćorovića plaža 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_56",
+    "name": "Savina 01",
+    "municipality": "Herceg Novi",
+    "area": "SAVINA",
+    "lat": 42.4495495,
+    "lon": 18.5536998,
+    "source_ids": {
+      "morsko_dobro": 56,
+      "portodimare": null
+    },
+    "official_site_name": "Savina 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_55",
+    "name": "Meljine 01",
+    "municipality": "Herceg Novi",
+    "area": "MELJINE",
+    "lat": 42.4537462,
+    "lon": 18.5634965,
+    "source_ids": {
+      "morsko_dobro": 55,
+      "portodimare": null
+    },
+    "official_site_name": "Meljine 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_54",
+    "name": "Zelenika 01",
+    "municipality": "Herceg Novi",
+    "area": "ZELENIKA",
+    "lat": 42.4456122,
+    "lon": 18.5766023,
+    "source_ids": {
+      "morsko_dobro": 54,
+      "portodimare": null
+    },
+    "official_site_name": "Zelenika 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_53",
+    "name": "Kumbor 01",
+    "municipality": "Herceg Novi",
+    "area": "KUMBOR",
+    "lat": 42.4388149,
+    "lon": 18.5860005,
+    "source_ids": {
+      "morsko_dobro": 53,
+      "portodimare": null
+    },
+    "official_site_name": "Kumbor 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_52",
+    "name": "Đenovići 01",
+    "municipality": "Herceg Novi",
+    "area": "DJENOVICI",
+    "lat": 42.4360479,
+    "lon": 18.6123115,
+    "source_ids": {
+      "morsko_dobro": 52,
+      "portodimare": null
+    },
+    "official_site_name": "Đenovići 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_51",
+    "name": "Baošići 01",
+    "municipality": "Herceg Novi",
+    "area": "BAOSICI",
+    "lat": 42.4396506,
+    "lon": 18.6274738,
+    "source_ids": {
+      "morsko_dobro": 51,
+      "portodimare": null
+    },
+    "official_site_name": "Baošići 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_50",
+    "name": "Bijela 01",
+    "municipality": "Herceg Novi",
+    "area": "BIJELA",
+    "lat": 42.453434,
+    "lon": 18.6603618,
+    "source_ids": {
+      "morsko_dobro": 50,
+      "portodimare": null
+    },
+    "official_site_name": "Bijela 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_49",
+    "name": "Kamenari 01",
+    "municipality": "Herceg Novi",
+    "area": "KAMENARI",
+    "lat": 42.459867,
+    "lon": 18.6764268,
+    "source_ids": {
+      "morsko_dobro": 49,
+      "portodimare": null
+    },
+    "official_site_name": "Kamenari 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_36",
+    "name": "Jaz 01",
     "municipality": "Budva",
-    "area": "Budva",
-    "lat": 42.2778,
-    "lon": 18.8334,
+    "area": "JAZ",
+    "lat": 42.2802098,
+    "lon": 18.8009566,
     "source_ids": {
-      "morsko_dobro": null,
+      "morsko_dobro": 36,
       "portodimare": null
     },
+    "official_site_name": "Jaz 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_35",
+    "name": "Jaz 02",
+    "municipality": "Budva",
+    "area": "JAZ",
+    "lat": 42.2820371,
+    "lon": 18.8032769,
+    "source_ids": {
+      "morsko_dobro": 35,
+      "portodimare": null
+    },
+    "official_site_name": "Jaz 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_34",
+    "name": "Jaz 03",
+    "municipality": "Budva",
+    "area": "JAZ",
+    "lat": 42.2833287,
+    "lon": 18.8065596,
+    "source_ids": {
+      "morsko_dobro": 34,
+      "portodimare": null
+    },
+    "official_site_name": "Jaz 03",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_33",
+    "name": "Žuta greda 01",
+    "municipality": "Budva",
+    "area": "ŽUTA GREDA",
+    "lat": 42.2838617,
+    "lon": 18.8109748,
+    "source_ids": {
+      "morsko_dobro": 33,
+      "portodimare": null
+    },
+    "official_site_name": "Žuta greda 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_32",
+    "name": "Mogren 01",
+    "municipality": "Budva",
+    "area": "MOGREN",
+    "lat": 42.2762342,
+    "lon": 18.8318809,
+    "source_ids": {
+      "morsko_dobro": 32,
+      "portodimare": null
+    },
+    "official_site_name": "Mogren 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_31",
+    "name": "Brijeg od Budve",
+    "municipality": "Budva",
+    "area": "BIJEG OD BUDVE",
+    "lat": 42.2773413,
+    "lon": 18.8363799,
+    "source_ids": {
+      "morsko_dobro": 31,
+      "portodimare": null
+    },
+    "official_site_name": "Brijeg od Budve",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_30",
+    "name": "Slovenska plaža 01",
+    "municipality": "Budva",
+    "area": "SLOVENSKA PLAZA",
+    "lat": 42.2826437,
+    "lon": 18.8406513,
+    "source_ids": {
+      "morsko_dobro": 30,
+      "portodimare": null
+    },
+    "official_site_name": "Slovenska plaža 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_29",
+    "name": "Slovenska plaža 02",
+    "municipality": "Budva",
+    "area": "SLOVENSKA PLAZA",
+    "lat": 42.283476,
+    "lon": 18.841909,
+    "source_ids": {
+      "morsko_dobro": 29,
+      "portodimare": null
+    },
+    "official_site_name": "Slovenska plaža 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_28",
+    "name": "Slovenska plaža 03",
+    "municipality": "Budva",
+    "area": "SLOVENSKA PLAZA",
+    "lat": 42.2840573,
+    "lon": 18.8447292,
+    "source_ids": {
+      "morsko_dobro": 28,
+      "portodimare": null
+    },
+    "official_site_name": "Slovenska plaža 03",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_27",
+    "name": "Slovenska plaža 04",
+    "municipality": "Budva",
+    "area": "SLOVENSKA PLAZA",
+    "lat": 42.2842783,
+    "lon": 18.8482266,
+    "source_ids": {
+      "morsko_dobro": 27,
+      "portodimare": null
+    },
+    "official_site_name": "Slovenska plaža 04",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_26",
+    "name": "Slovenska plaža 05",
+    "municipality": "Budva",
+    "area": "SLOVENSKA PLAZA",
+    "lat": 42.2844887,
+    "lon": 18.851635,
+    "source_ids": {
+      "morsko_dobro": 26,
+      "portodimare": null
+    },
+    "official_site_name": "Slovenska plaža 05",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_25",
+    "name": "Slovenska plaža 06",
+    "municipality": "Budva",
+    "area": "SLOVENSKA PLAZA",
+    "lat": 42.2841536,
+    "lon": 18.8544427,
+    "source_ids": {
+      "morsko_dobro": 25,
+      "portodimare": null
+    },
+    "official_site_name": "Slovenska plaža 06",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_24",
+    "name": "Zavala 01",
+    "municipality": "Budva",
+    "area": "ZAVALA",
+    "lat": 42.2817449,
+    "lon": 18.8569512,
+    "source_ids": {
+      "morsko_dobro": 24,
+      "portodimare": null
+    },
+    "official_site_name": "Zavala 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_23",
+    "name": "Bečićka plaža 01",
+    "municipality": "Budva",
+    "area": "BECICKA PLAZA",
+    "lat": 42.279707,
+    "lon": 18.862447,
+    "source_ids": {
+      "morsko_dobro": 23,
+      "portodimare": null
+    },
+    "official_site_name": "Bečićka plaža 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_48",
+    "name": "Bečićka plaža 02",
+    "municipality": "Budva",
+    "area": "BECICKA PLAZA",
+    "lat": 42.2801685,
+    "lon": 18.8660998,
+    "source_ids": {
+      "morsko_dobro": 48,
+      "portodimare": null
+    },
+    "official_site_name": "Bečićka plaža 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_47",
+    "name": "Bečićka plaža 03",
+    "municipality": "Budva",
+    "area": "BECICKA PLAZA",
+    "lat": 42.2803826,
+    "lon": 18.8695691,
+    "source_ids": {
+      "morsko_dobro": 47,
+      "portodimare": null
+    },
+    "official_site_name": "Bečićka plaža 03",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_46",
+    "name": "Bečićka plaža 04",
+    "municipality": "Budva",
+    "area": "BECICKA PLAZA",
+    "lat": 42.2803999,
+    "lon": 18.8732604,
+    "source_ids": {
+      "morsko_dobro": 46,
+      "portodimare": null
+    },
+    "official_site_name": "Bečićka plaža 04",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_45",
+    "name": "Bečićka plaža 05",
+    "municipality": "Budva",
+    "area": "BECICKA PLAZA",
+    "lat": 42.280263,
+    "lon": 18.876622,
+    "source_ids": {
+      "morsko_dobro": 45,
+      "portodimare": null
+    },
+    "official_site_name": "Bečićka plaža 05",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_44",
+    "name": "Rafailovići",
+    "municipality": "Budva",
+    "area": "RAFAILOVICI",
+    "lat": 42.2797124,
+    "lon": 18.8798534,
+    "source_ids": {
+      "morsko_dobro": 44,
+      "portodimare": null
+    },
+    "official_site_name": "Rafailovići",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_43",
+    "name": "Kamenovo",
+    "municipality": "Budva",
+    "area": "KAMENOVO",
+    "lat": 42.2747031,
+    "lon": 18.8864702,
+    "source_ids": {
+      "morsko_dobro": 43,
+      "portodimare": null
+    },
+    "official_site_name": "Kamenovo",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_42",
+    "name": "Pržno ",
+    "municipality": "Budva",
+    "area": "PRZNO",
+    "lat": 42.2681847,
+    "lon": 18.8915345,
+    "source_ids": {
+      "morsko_dobro": 42,
+      "portodimare": null
+    },
+    "official_site_name": "Pržno ",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_41",
+    "name": "Sv. Stefan plaža 01",
+    "municipality": "Budva",
+    "area": "SVETOSTEFANSKA PLAZA",
+    "lat": 42.2573378,
+    "lon": 18.8920707,
+    "source_ids": {
+      "morsko_dobro": 41,
+      "portodimare": null
+    },
+    "official_site_name": "Sv. Stefan plaža 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_40",
+    "name": "Sv. Stefan plaža 02",
+    "municipality": "Budva",
+    "area": "SVETOSTEFANSKA PLAZA",
+    "lat": 42.2557073,
+    "lon": 18.8931665,
+    "source_ids": {
+      "morsko_dobro": 40,
+      "portodimare": null
+    },
+    "official_site_name": "Sv. Stefan plaža 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_39",
+    "name": "Sv. Stefan plaža 03",
+    "municipality": "Budva",
+    "area": "SVETOSTEFANSKA PLAZA",
+    "lat": 42.2542624,
+    "lon": 18.8950538,
+    "source_ids": {
+      "morsko_dobro": 39,
+      "portodimare": null
+    },
+    "official_site_name": "Sv. Stefan plaža 03",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_38",
+    "name": "Crvena Glavica 01",
+    "municipality": "Budva",
+    "area": "Crvena Glavica",
+    "lat": 42.2439625,
+    "lon": 18.8977272,
+    "source_ids": {
+      "morsko_dobro": 38,
+      "portodimare": null
+    },
+    "official_site_name": "Crvena Glavica 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_37",
+    "name": "Drobni pijesak",
+    "municipality": "Budva",
+    "area": "DROBNI PIJESAK",
+    "lat": 42.2340525,
+    "lon": 18.901779,
+    "source_ids": {
+      "morsko_dobro": 37,
+      "portodimare": null
+    },
+    "official_site_name": "Drobni pijesak",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_125",
+    "name": "REŽEVIĆI",
+    "municipality": "Budva",
+    "area": "Reževići",
+    "lat": 42.2308514,
+    "lon": 18.9045449,
+    "source_ids": {
+      "morsko_dobro": 125,
+      "portodimare": null
+    },
+    "official_site_name": "REŽEVIĆI",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_22",
+    "name": "Plaža Petrovac 01 ",
+    "municipality": "Budva",
+    "area": "PETROVACKA PLAZA",
+    "lat": 42.2054895,
+    "lon": 18.9389127,
+    "source_ids": {
+      "morsko_dobro": 22,
+      "portodimare": null
+    },
+    "official_site_name": "Plaža Petrovac 01 ",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_21",
+    "name": "Plaža Petrovac 02",
+    "municipality": "Budva",
+    "area": "PETROVACKA PLAZA",
+    "lat": 42.2044308,
+    "lon": 18.9416755,
+    "source_ids": {
+      "morsko_dobro": 21,
+      "portodimare": null
+    },
+    "official_site_name": "Plaža Petrovac 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_20",
+    "name": "Plaža Petrovac 03",
+    "municipality": "Budva",
+    "area": "PETROVACKA PLAZA",
+    "lat": 42.2026307,
+    "lon": 18.9423953,
+    "source_ids": {
+      "morsko_dobro": 20,
+      "portodimare": null
+    },
+    "official_site_name": "Plaža Petrovac 03",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_19",
+    "name": "Lučice",
+    "municipality": "Budva",
+    "area": "LUCICE",
+    "lat": 42.2000716,
+    "lon": 18.9502022,
+    "source_ids": {
+      "morsko_dobro": 19,
+      "portodimare": null
+    },
+    "official_site_name": "Lučice",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_18",
+    "name": "Buljarica 01",
+    "municipality": "Budva",
+    "area": "BULJARICA",
+    "lat": 42.1952774,
+    "lon": 18.9595328,
+    "source_ids": {
+      "morsko_dobro": 18,
+      "portodimare": null
+    },
+    "official_site_name": "Buljarica 01",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_17",
+    "name": "Buljarica 02",
+    "municipality": "Budva",
+    "area": "BULJARICA",
+    "lat": 42.1943248,
+    "lon": 18.9624579,
+    "source_ids": {
+      "morsko_dobro": 17,
+      "portodimare": null
+    },
+    "official_site_name": "Buljarica 02",
+    "geometry_source": "morsko_dobro_polygon_centroid",
+    "active": true
+  },
+  {
+    "site_id": "morsko_dobro_16",
+    "name": "Buljarica 03",
+    "municipality": "Budva",
+    "area": "BULJARICA",
+    "lat": 42.1923994,
+    "lon": 18.9652927,
+    "source_ids": {
+      "morsko_dobro": 16,
+      "portodimare": null
+    },
+    "official_site_name": "Buljarica 03",
+    "geometry_source": "morsko_dobro_polygon_centroid",
     "active": true
   }
 ]

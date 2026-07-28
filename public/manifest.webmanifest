@@ -1,7 +1,7 @@
 {
-  "name": "Boka Water Quality",
-  "short_name": "Boka Water",
-  "description": "Map-based MVP for official sea water quality status and contextual risk in Boka Kotorska.",
+  "name": "Boka – kvalita mořské vody",
+  "short_name": "Boka",
+  "description": "Mapové MVP pro výsledky kvality mořské vody a oddělený kontext v Boce Kotorské.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f4fbfd",

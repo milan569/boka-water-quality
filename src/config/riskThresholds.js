@@ -3,5 +3,6 @@ export const RISK_THRESHOLDS = {
   oldSampleDays: 7,
   elevatedRain24hMm: 20,
   highRain72hMm: 50,
-  incidentLookbackDays: 7
+  incidentLookbackDays: 7,
+  weatherContextMaxAgeHours: 12
 };
