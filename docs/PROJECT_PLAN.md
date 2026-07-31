@@ -89,6 +89,17 @@ Implemented:
 5. Keep official quality and contextual risk visually separate.
 6. Batch site coordinates into API requests of at most 25 locations.
 7. Add CC BY 4.0 attribution and scheduled weather workflow.
+8. Explicitly dispatch a Pages deployment after bot-authored data commits.
+
+## Phase 5b: Automatic official-data refresh
+
+Status: implemented as a low-frequency daily check plus manual dispatch.
+
+- Resolve the season year dynamically for scheduled runs.
+- Import all four target municipalities.
+- Validate, test and build before committing changed data.
+- Trigger a fresh Pages deployment only when the official dataset changed.
+- Keep the source-licence question open before increasing the request frequency.
 
 ## Phase 6: Optional extensions
 
