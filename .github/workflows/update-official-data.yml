@@ -1,6 +1,8 @@
 name: Update official bathing-water data
 
 on:
+  schedule:
+    - cron: '37 7 * * *'
   workflow_dispatch:
     inputs:
       year:
@@ -9,6 +11,7 @@ on:
         default: '2026'
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
@@ -33,7 +36,11 @@ jobs:
         run: npm ci
 
       - name: Import target municipalities from JP Morsko dobro
-        run: npm run import:morsko -- --year=${{ inputs.year }}
+        env:
+          INPUT_YEAR: ${{ inputs.year }}
+        run: |
+          year="${INPUT_YEAR:-$(date -u +%Y)}"
+          npm run import:morsko -- --year="$year"
 
       - name: Update Open-Meteo context
         run: npm run update:weather
@@ -48,13 +55,22 @@ jobs:
         run: npm run build
 
       - name: Commit verified dataset
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data raw/morsko_dobro
           if git diff --cached --quiet; then
             echo "No official-data changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Update JP Morsko dobro data"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Deploy updated application
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

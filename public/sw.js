@@ -1,4 +1,4 @@
-const CACHE_NAME = 'boka-water-quality-mvp-v5';
+const CACHE_NAME = 'boka-water-quality-mvp-v6';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
@@ -18,6 +18,21 @@ self.addEventListener('fetch', (event) => {
   const request = event.request;
 
   if (request.method !== 'GET') return;
+
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request, { cache: 'no-store' })
+        .then((response) => {
+          if (response && response.status === 200) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          }
+          return response;
+        })
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(request).then((cached) => {

@@ -224,7 +224,8 @@ firewallu, síti nebo VPN.
 4. Doporučený název: `Boka` nebo `Boka Water`.
 
 Po změně ikony nebo service workeru může být nutné odstranit starého zástupce a
-přidat jej znovu. Cache je po aktuálních změnách verzována jako `v5`.
+přidat jej znovu. Cache je po aktuálních změnách verzována jako `v6` a
+navigační požadavky používají při dostupné síti strategii network-first.
 
 ## 11. Lokalizace
 
@@ -236,9 +237,10 @@ přeloženého zobrazení, aby nedošlo ke ztrátě významu.
 
 - dataset pokrývá obce Kotor, Tivat, Herceg Novi a Budva,
 - veřejný JSON neobsahuje číselné hodnoty E. coli a enterokoků,
-- není vyjasněna licence automatizované redistribuce Morsko dobro,
-- automatická aktualizace oficiálních dat je proto připravena pouze ručně,
-- Open-Meteo workflow je připraven, ale začne běžet až po publikaci změn,
+- není vyjasněna licence automatizované redistribuce Morsko dobro; automatická
+  kontrola proto běží záměrně jen jednou denně,
+- Open-Meteo se aktualizuje přibližně každých šest hodin,
+- oba datové workflow po změně výslovně spustí nové nasazení GitHub Pages,
 - obecné watch-pointy Muo a Kotor City Beach nejsou jednoznačně spárovány,
 - prozatímní a odborně nevalidované rizikové prahy,
 - minimální offline schopnost,

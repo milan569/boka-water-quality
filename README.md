@@ -70,9 +70,14 @@ npm test
 npm run build
 ```
 
-Workflow `update-official-data.yml` je záměrně pouze ruční, dokud nebude
-vyjasněna licence automatizované redistribuce dat JP Morsko dobro. Open-Meteo
-workflow je připraven na aktualizaci každých šest hodin.
+Workflow `update-official-data.yml` kontroluje oficiální zdroj jednou denně a
+lze jej spustit také ručně. Podmínky automatizované redistribuce dat JP Morsko
+dobro je stále nutné právně vyjasnit; frekvence je proto záměrně nízká.
+Open-Meteo se aktualizuje přibližně každých šest hodin. Po každé datové změně
+workflow výslovně spustí nové nasazení GitHub Pages.
+
+Service worker používá pro navigaci strategii network-first, takže nainstalovaná
+PWA při dostupné síti nepřidržuje starou verzi aplikace.
 
 ## Dokumentace zdrojů
 
