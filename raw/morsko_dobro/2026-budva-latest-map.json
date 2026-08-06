@@ -106,12 +106,12 @@
       "plaza": "SLOVENSKA PLAZA",
       "opstina": "Budva",
       "kalendar": 5,
-      "vrijemeUzorkovanja": "23.07.2026. 09:10",
-      "datumUzorkovanja": "23.07.2026",
+      "vrijemeUzorkovanja": "28.07.2026. 09:20",
+      "datumUzorkovanja": "28.07.2026",
       "satUzorkovanja": 9,
-      "minutUzorkovanja": 10,
-      "ocjena": "Loša",
-      "tezina": 4
+      "minutUzorkovanja": 20,
+      "ocjena": "Odlična",
+      "tezina": 1
     },
     {
       "id": 29,
@@ -330,12 +330,12 @@
       "plaza": "PRZNO",
       "opstina": "Budva",
       "kalendar": 5,
-      "vrijemeUzorkovanja": "23.07.2026. 09:35",
-      "datumUzorkovanja": "23.07.2026",
-      "satUzorkovanja": 9,
-      "minutUzorkovanja": 35,
-      "ocjena": "Loša",
-      "tezina": 4
+      "vrijemeUzorkovanja": "31.07.2026. 06:16",
+      "datumUzorkovanja": "31.07.2026",
+      "satUzorkovanja": 6,
+      "minutUzorkovanja": 16,
+      "ocjena": "Dobra",
+      "tezina": 2
     },
     {
       "id": 41,
@@ -549,20 +549,16 @@
   "sumarno": [
     [
       1,
-      27
+      28
     ],
     [
       2,
-      2
+      3
     ],
     [
       3,
       3
-    ],
-    [
-      4,
-      2
     ]
   ],
-  "ukupnoSumarno": 4
+  "ukupnoSumarno": 3
 }
