@@ -20,7 +20,7 @@ důkazem hygienické kvality vody a nemění oficiální třídu.
 ## Co aplikace obsahuje
 
 - 81 oficiálních míst ve čtyřech obcích odvozených z polygonů Morsko dobro,
-- 405 měření z pěti kol sezony 2026, nejnověji do 24. 7. 2026,
+- 405 měření z pěti kol sezony 2026, nejnověji do 31. 7. 2026,
 - oficiální třídy Výborná, Dobrá, Vyhovující a Špatná,
 - datum a stáří odběru, teploty, salinitu a zdroj,
 - historii posledních dvou měsíců vztaženou k nejnovějšímu odběru,
@@ -70,14 +70,18 @@ npm test
 npm run build
 ```
 
-Workflow `update-official-data.yml` kontroluje oficiální zdroj jednou denně a
-lze jej spustit také ručně. Podmínky automatizované redistribuce dat JP Morsko
-dobro je stále nutné právně vyjasnit; frekvence je proto záměrně nízká.
+Workflow `update-official-data.yml` lehce kontroluje nejnovější mapová data
+čtyřikrát denně a lze jej spustit také ručně. Pokud se mapa nezměnila, nenačítá
+81 detailních historií ani nevytváří nové nasazení. Jednou týdně proběhne úplná
+kontrola historie; ručně ji lze vynutit volbou `force`. Podmínky automatizované
+redistribuce dat JP Morsko dobro je stále nutné právně vyjasnit.
 Open-Meteo se aktualizuje přibližně každých šest hodin. Po každé datové změně
 workflow výslovně spustí nové nasazení GitHub Pages.
 
 Service worker používá pro navigaci strategii network-first, takže nainstalovaná
-PWA při dostupné síti nepřidržuje starou verzi aplikace.
+PWA při dostupné síti nepřidržuje starou verzi aplikace. Tlačítko
+**Aktualizovat** a gesto stažení horní části obrazovky dolů načtou nejnovější
+již zveřejněnou verzi; samotný import dat provádí zabezpečený GitHub workflow.
 
 ## Dokumentace zdrojů
 

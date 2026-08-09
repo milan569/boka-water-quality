@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   mapOfficialClass,
+  mapPayloadsMatch,
   parseArgs,
   parseMontenegrinDate,
   polygonCentroid
@@ -19,6 +20,17 @@ test('jednu obec lze vybrat zpětně kompatibilním parametrem', () => {
     parseArgs(['--municipality=Tivat', '--year=2026']).municipalities,
     ['Tivat']
   );
+});
+
+test('úplný import lze vynutit', () => {
+  assert.equal(parseArgs(['--year=2026', '--force']).force, true);
+});
+
+test('stejná mapová data nevyžadují načtení celé historie', () => {
+  const payload = { mjerenja: [{ id: 1, datumUzorkovanja: '31.07.2026.' }] };
+  assert.equal(mapPayloadsMatch(payload, structuredClone(payload)), true);
+  assert.equal(mapPayloadsMatch(payload, { mjerenja: [{ id: 1, datumUzorkovanja: '01.08.2026.' }] }), false);
+  assert.equal(mapPayloadsMatch(null, payload), false);
 });
 
 test('datum Morsko dobro se převádí na ISO', () => {

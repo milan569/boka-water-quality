@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -21,11 +21,13 @@ export function parseArgs(args) {
     year: new Date().getFullYear(),
     outputDir: path.join(ROOT, 'src', 'data'),
     rawDir: path.join(ROOT, 'raw', 'morsko_dobro'),
-    dryRun: false
+    dryRun: false,
+    force: false
   };
 
   for (const arg of args) {
     if (arg === '--dry-run') options.dryRun = true;
+    else if (arg === '--force') options.force = true;
     else if (arg.startsWith('--municipality=')) {
       options.municipalities = [arg.split('=').slice(1).join('=').trim()];
     } else if (arg.startsWith('--municipalities=')) {
@@ -217,6 +219,20 @@ async function writeJson(filePath, value) {
   await writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, 'utf8');
 }
 
+async function readJsonIfPresent(filePath) {
+  try {
+    return JSON.parse(await readFile(filePath, 'utf8'));
+  } catch (error) {
+    if (error.code === 'ENOENT') return null;
+    throw error;
+  }
+}
+
+export function mapPayloadsMatch(previousPayload, currentPayload) {
+  return previousPayload !== null &&
+    JSON.stringify(previousPayload) === JSON.stringify(currentPayload);
+}
+
 function municipalitySlug(value) {
   return value.toLowerCase().replace(/\s+/g, '-');
 }
@@ -234,7 +250,6 @@ async function importMunicipalities(options) {
 
   const importedAt = new Date().toISOString();
   const sites = [];
-  const measurements = [];
   const rawSnapshots = [];
   const breakdown = {};
 
@@ -250,10 +265,83 @@ async function importMunicipalities(options) {
     }
 
     const municipalitySites = mapPayload.mjerenja.map(normalizeSite);
-    const municipalityMeasurements = [];
-    let representativeDetail = null;
+    sites.push(...municipalitySites);
+    rawSnapshots.push({
+      municipality,
+      mapPayload,
+      municipalitySites,
+      representativeDetail: null
+    });
+    breakdown[municipality] = {
+      sites: municipalitySites.length,
+      measurements: 0
+    };
+  }
 
-    for (const site of municipalitySites) {
+  const duplicateSiteIds = sites
+    .map((site) => site.site_id)
+    .filter((siteId, index, all) => all.indexOf(siteId) !== index);
+  if (duplicateSiteIds.length > 0) {
+    throw new Error(`Duplicitní oficiální lokality: ${[...new Set(duplicateSiteIds)].join(', ')}.`);
+  }
+
+  const previousRawPayloads = await Promise.all(
+    rawSnapshots.map((snapshot) =>
+      readJsonIfPresent(
+        path.join(options.rawDir, `${options.year}-${municipalitySlug(snapshot.municipality)}-latest-map.json`)
+      )
+    )
+  );
+  const [previousSites, previousMeasurements, previousMetadata] = await Promise.all([
+    readJsonIfPresent(path.join(options.outputDir, 'bathing_sites.json')),
+    readJsonIfPresent(path.join(options.outputDir, 'measurements.json')),
+    readJsonIfPresent(path.join(options.outputDir, 'dataset_metadata.json'))
+  ]);
+  const mapSnapshotsMatch = rawSnapshots.every((snapshot, index) =>
+    mapPayloadsMatch(previousRawPayloads[index], snapshot.mapPayload)
+  );
+  const previousDatasetMatches = Array.isArray(previousSites) &&
+    Array.isArray(previousMeasurements) &&
+    previousMetadata?.season === options.year &&
+    previousMetadata?.latest_round === latestRound.numericId &&
+    previousSites.length === sites.length &&
+    options.municipalities.every((municipality) =>
+      previousMetadata.municipalities?.includes(municipality)
+    );
+  const sourceChanged = !(mapSnapshotsMatch && previousDatasetMatches);
+
+  if (!options.dryRun && !options.force && !sourceChanged) {
+    for (const municipality of options.municipalities) {
+      const municipalitySiteIds = new Set(
+        previousSites
+          .filter((site) => site.municipality === municipality)
+          .map((site) => site.site_id)
+      );
+      breakdown[municipality].measurements = previousMeasurements.filter((measurement) =>
+        municipalitySiteIds.has(measurement.site_id)
+      ).length;
+    }
+
+    return {
+      municipalities: options.municipalities,
+      year: options.year,
+      round: latestRound.numericId,
+      sites: previousSites.length,
+      measurements: previousMeasurements.length,
+      measurementsThrough: previousMetadata.measurements_through,
+      breakdown,
+      changed: false,
+      skippedDetails: true,
+      dryRun: false,
+      force: false
+    };
+  }
+
+  const measurements = [];
+  for (const snapshot of rawSnapshots) {
+    const municipalityMeasurements = [];
+
+    for (const site of snapshot.municipalitySites) {
       const externalId = site.source_ids.morsko_dobro;
       const detailUrl = new URL('/javna/dajRezultateUzorkovanja', BASE_URL);
       detailUrl.searchParams.set('id', String(externalId));
@@ -265,27 +353,11 @@ async function importMunicipalities(options) {
       for (const item of detail.mjerenja) {
         municipalityMeasurements.push(normalizeMeasurement(item, importedAt));
       }
-      if (representativeDetail === null) representativeDetail = detail;
+      if (snapshot.representativeDetail === null) snapshot.representativeDetail = detail;
     }
 
-    sites.push(...municipalitySites);
     measurements.push(...municipalityMeasurements);
-    rawSnapshots.push({
-      municipality,
-      mapPayload,
-      representativeDetail
-    });
-    breakdown[municipality] = {
-      sites: municipalitySites.length,
-      measurements: municipalityMeasurements.length
-    };
-  }
-
-  const duplicateSiteIds = sites
-    .map((site) => site.site_id)
-    .filter((siteId, index, all) => all.indexOf(siteId) !== index);
-  if (duplicateSiteIds.length > 0) {
-    throw new Error(`Duplicitní oficiální lokality: ${[...new Set(duplicateSiteIds)].join(', ')}.`);
+    breakdown[snapshot.municipality].measurements = municipalityMeasurements.length;
   }
 
   measurements.sort((left, right) =>
@@ -342,7 +414,10 @@ async function importMunicipalities(options) {
     measurements: measurements.length,
     measurementsThrough,
     breakdown,
-    dryRun: options.dryRun
+    changed: options.force || sourceChanged,
+    skippedDetails: false,
+    dryRun: options.dryRun,
+    force: options.force
   };
 }
 

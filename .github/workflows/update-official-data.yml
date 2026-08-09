@@ -2,13 +2,19 @@ name: Update official bathing-water data
 
 on:
   schedule:
-    - cron: '37 7 * * *'
+    - cron: '43 2,8,14,20 * * *'
+    - cron: '17 1 * * 0'
   workflow_dispatch:
     inputs:
       year:
         description: Season year
         required: true
         default: '2026'
+      force:
+        description: Force complete history refresh
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   actions: write
@@ -38,23 +44,43 @@ jobs:
       - name: Import target municipalities from JP Morsko dobro
         env:
           INPUT_YEAR: ${{ inputs.year }}
+          FORCE_IMPORT: ${{ inputs.force }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
         run: |
           year="${INPUT_YEAR:-$(date -u +%Y)}"
-          npm run import:morsko -- --year="$year"
+          force_args=()
+          if [ "$FORCE_IMPORT" = "true" ] || [ "$EVENT_SCHEDULE" = "17 1 * * 0" ]; then
+            force_args+=(--force)
+          fi
+          npm run import:morsko -- --year="$year" "${force_args[@]}"
+
+      - name: Detect official-data changes
+        id: official
+        run: |
+          if git diff --quiet -- src/data/bathing_sites.json src/data/measurements.json src/data/dataset_metadata.json raw/morsko_dobro; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Update Open-Meteo context
+        if: steps.official.outputs.changed == 'true'
         run: npm run update:weather
 
       - name: Validate data
+        if: steps.official.outputs.changed == 'true'
         run: npm run validate:data
 
       - name: Test
+        if: steps.official.outputs.changed == 'true'
         run: npm test
 
       - name: Build
+        if: steps.official.outputs.changed == 'true'
         run: npm run build
 
       - name: Commit verified dataset
+        if: steps.official.outputs.changed == 'true'
         id: commit
         run: |
           git config user.name "github-actions[bot]"
