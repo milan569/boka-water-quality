@@ -93,13 +93,16 @@ Implemented:
 
 ## Phase 5b: Automatic official-data refresh
 
-Status: implemented as a low-frequency daily check plus manual dispatch.
+Status: implemented as a lightweight six-hour check, weekly full refresh and manual dispatch.
 
 - Resolve the season year dynamically for scheduled runs.
 - Import all four target municipalities.
 - Validate, test and build before committing changed data.
+- Compare four latest map payloads before requesting 81 detailed histories.
 - Trigger a fresh Pages deployment only when the official dataset changed.
-- Keep the source-licence question open before increasing the request frequency.
+- Allow a forced full-history refresh from the manual workflow.
+- Reload the latest deployed version by button or pull-down gesture in the PWA.
+- Keep the source-licence question open and minimize requests until it is resolved.
 
 ## Phase 6: Optional extensions
 
