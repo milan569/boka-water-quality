@@ -15,6 +15,8 @@ const serviceWorker = await readFile(
   'utf8'
 );
 const app = await readFile(new URL('../src/App.jsx', import.meta.url), 'utf8');
+const styles = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8');
+const index = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 
 test('oficiální data se lehce kontrolují čtyřikrát denně a lze je spustit ručně', () => {
   assert.match(officialWorkflow, /schedule:/);
@@ -38,7 +40,15 @@ test('oba datové workflow po změně spouštějí nasazení', () => {
 test('PWA navigace používá při dostupné síti novou verzi', () => {
   assert.match(serviceWorker, /request\.mode === 'navigate'/);
   assert.match(serviceWorker, /fetch\(request, \{ cache: 'no-store' \}\)/);
-  assert.match(serviceWorker, /boka-water-quality-mvp-v7/);
+  assert.match(serviceWorker, /boka-water-quality-mvp-v8/);
+});
+
+test('obsah iOS PWA začíná pod stavovým pruhem a výřezem', () => {
+  assert.match(index, /apple-mobile-web-app-status-bar-style" content="default"/);
+  assert.match(index, /viewport-fit=cover/);
+  assert.match(styles, /--safe-top: env\(safe-area-inset-top, 0px\)/);
+  assert.match(styles, /padding: calc\(8px \+ var\(--safe-top\)\) 8px 8px/);
+  assert.match(styles, /top: var\(--safe-top\)/);
 });
 
 test('aplikace nabízí tlačítko i gesto pro načtení zveřejněných dat', () => {
