@@ -224,8 +224,10 @@ firewallu, síti nebo VPN.
 4. Doporučený název: `Boka` nebo `Boka Water`.
 
 Po změně ikony nebo service workeru může být nutné odstranit starého zástupce a
-přidat jej znovu. Cache je po aktuálních změnách verzována jako `v7` a
+přidat jej znovu. Cache je po aktuálních změnách verzována jako `v8` a
 navigační požadavky používají při dostupné síti strategii network-first.
+Horní okraj používá iOS safe area a standardní stavový řádek, takže čitelný
+obsah nezačíná pod výřezem ani systémovými ukazateli.
 
 ## 11. Lokalizace
 
