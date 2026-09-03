@@ -314,12 +314,12 @@
       "plaza": "BAOSICI",
       "opstina": "Herceg Novi",
       "kalendar": 7,
-      "vrijemeUzorkovanja": "21.08.2026. 05:50",
-      "datumUzorkovanja": "21.08.2026",
-      "satUzorkovanja": 5,
-      "minutUzorkovanja": 50,
-      "ocjena": "Loša",
-      "tezina": 4
+      "vrijemeUzorkovanja": "26.08.2026. 08:55",
+      "datumUzorkovanja": "26.08.2026",
+      "satUzorkovanja": 8,
+      "minutUzorkovanja": 55,
+      "ocjena": "Zadovoljavajuća",
+      "tezina": 3
     },
     {
       "id": 50,
@@ -365,12 +365,8 @@
     ],
     [
       3,
-      3
-    ],
-    [
-      4,
-      1
+      4
     ]
   ],
-  "ukupnoSumarno": 4
+  "ukupnoSumarno": 3
 }

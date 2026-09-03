@@ -26,12 +26,12 @@
       "plaza": "DONJA LASTVA",
       "opstina": "Tivat",
       "kalendar": 7,
-      "vrijemeUzorkovanja": "21.08.2026. 06:34",
-      "datumUzorkovanja": "21.08.2026",
-      "satUzorkovanja": 6,
-      "minutUzorkovanja": 34,
-      "ocjena": "Loša",
-      "tezina": 4
+      "vrijemeUzorkovanja": "28.08.2026. 08:45",
+      "datumUzorkovanja": "28.08.2026",
+      "satUzorkovanja": 8,
+      "minutUzorkovanja": 45,
+      "ocjena": "Zadovoljavajuća",
+      "tezina": 3
     },
     {
       "id": 88,
@@ -173,12 +173,8 @@
     ],
     [
       3,
-      1
-    ],
-    [
-      4,
-      1
+      2
     ]
   ],
-  "ukupnoSumarno": 4
+  "ukupnoSumarno": 3
 }
