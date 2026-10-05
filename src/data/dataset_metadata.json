@@ -1,7 +1,7 @@
 {
   "dataset_type": "real",
-  "generated_at": "2026-10-04T06:50:08.705Z",
-  "measurements_through": "2026-09-16",
+  "generated_at": "2026-10-05T09:36:25.052Z",
+  "measurements_through": "2026-09-30",
   "source_name": "JP Morsko dobro",
   "source_url": "https://monitoring.morskodobro.me/",
   "municipalities": [
@@ -11,7 +11,7 @@
     "Budva"
   ],
   "season": 2026,
-  "latest_round": 9,
+  "latest_round": 10,
   "microbiology_units": {
     "ecoli": "/100 ml",
     "enterococci": "/100 ml"
