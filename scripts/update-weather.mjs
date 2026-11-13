@@ -7,6 +7,9 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = path.join(ROOT, 'src', 'data');
 const OPEN_METEO_URL = 'https://api.open-meteo.com/v1/forecast';
 const BATCH_SIZE = 25;
+const FETCH_ATTEMPTS = 4;
+const FETCH_TIMEOUT_MS = 20_000;
+const RETRY_DELAYS_MS = [1_000, 3_000, 7_000];
 
 function parseArgs(args) {
   const options = {
@@ -92,20 +95,82 @@ export function createBatches(items, size = BATCH_SIZE) {
   return batches;
 }
 
+function delay(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
+function isRetryableStatus(status) {
+  return status === 429 || status >= 500;
+}
+
+export async function fetchWithRetry(url, options = {}, retryOptions = {}) {
+  const {
+    attempts = FETCH_ATTEMPTS,
+    timeoutMs = FETCH_TIMEOUT_MS,
+    delaysMs = RETRY_DELAYS_MS,
+    fetchImpl = fetch,
+    sleepImpl = delay,
+    onRetry = () => {}
+  } = retryOptions;
+
+  if (!Number.isInteger(attempts) || attempts < 1) {
+    throw new Error('Počet pokusů musí být kladné celé číslo.');
+  }
+
+  let lastError = null;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetchImpl(url, {
+        ...options,
+        signal: AbortSignal.timeout(timeoutMs)
+      });
+      if (response.ok || !isRetryableStatus(response.status)) return response;
+      lastError = new Error(`${response.status} ${response.statusText || 'Open-Meteo'}`);
+    } catch (error) {
+      lastError = error;
+    }
+
+    if (attempt < attempts) {
+      const waitMs = delaysMs[Math.min(attempt - 1, delaysMs.length - 1)] ?? 0;
+      onRetry({ attempt, attempts, waitMs, reason: lastError?.message || 'neznámá chyba' });
+      await sleepImpl(waitMs);
+    }
+  }
+
+  throw new Error(
+    `Open-Meteo je nedostupné po ${attempts} pokusech: ${lastError?.message || 'neznámá chyba'}`,
+    { cause: lastError }
+  );
+}
+
 async function fetchWeather(sites) {
   const responses = [];
   const requestUrls = [];
+  const batches = createBatches(sites);
 
-  for (const batch of createBatches(sites)) {
+  for (const [batchIndex, batch] of batches.entries()) {
     const url = buildRequestUrl(batch);
-    const response = await fetch(url, {
-      headers: {
-        Accept: 'application/json',
-        'User-Agent': 'boka-water-quality/0.2 (+https://github.com/milan569/boka-water-quality)'
+    const response = await fetchWithRetry(
+      url,
+      {
+        headers: {
+          Accept: 'application/json',
+          'User-Agent': 'boka-water-quality/0.2 (+https://github.com/milan569/boka-water-quality)'
+        }
+      },
+      {
+        onRetry: ({ attempt, attempts, waitMs, reason }) => {
+          console.warn(
+            `Open-Meteo dávka ${batchIndex + 1}/${batches.length}: pokus ${attempt}/${attempts} ` +
+            `selhal (${reason}), další za ${waitMs} ms.`
+          );
+        }
       }
-    });
+    );
     if (!response.ok) {
-      throw new Error(`${response.status} ${response.statusText}: Open-Meteo`);
+      throw new Error(
+        `${response.status} ${response.statusText}: Open-Meteo dávka ${batchIndex + 1}/${batches.length}`
+      );
     }
     const payload = await response.json();
     const batchResponses = Array.isArray(payload) ? payload : [payload];
