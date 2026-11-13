@@ -37,6 +37,14 @@ test('oba datové workflow po změně spouštějí nasazení', () => {
   }
 });
 
+test('výpadek Open-Meteo zachová poslední ověřený kontext bez selhání workflow', () => {
+  assert.match(weatherWorkflow, /id: weather/);
+  assert.match(weatherWorkflow, /continue-on-error: true/);
+  assert.match(weatherWorkflow, /steps\.weather\.outcome == 'failure'/);
+  assert.match(weatherWorkflow, /Keeping the last verified weather context/);
+  assert.match(weatherWorkflow, /stale after 12 hours/);
+});
+
 test('PWA navigace používá při dostupné síti novou verzi', () => {
   assert.match(serviceWorker, /request\.mode === 'navigate'/);
   assert.match(serviceWorker, /fetch\(request, \{ cache: 'no-store' \}\)/);

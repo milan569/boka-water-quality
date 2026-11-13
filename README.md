@@ -77,6 +77,9 @@ kontrola historie; ručně ji lze vynutit volbou `force`. Podmínky automatizova
 redistribuce dat JP Morsko dobro je stále nutné právně vyjasnit.
 Open-Meteo se aktualizuje přibližně každých šest hodin. Po každé datové změně
 workflow výslovně spustí nové nasazení GitHub Pages.
+Krátké síťové chyby Open-Meteo se automaticky opakují. Pokud služba zůstane
+nedostupná, workflow zachová poslední ověřený kontext a zobrazí varování;
+aplikace počasí starší než 12 hodin nepoužije jako aktuální.
 
 Service worker používá pro navigaci strategii network-first, takže nainstalovaná
 PWA při dostupné síti nepřidržuje starou verzi aplikace. Tlačítko

@@ -31,7 +31,14 @@ jobs:
         run: npm ci
 
       - name: Update Open-Meteo context
+        id: weather
+        continue-on-error: true
         run: npm run update:weather
+
+      - name: Keep last verified weather context when provider is unavailable
+        if: steps.weather.outcome == 'failure'
+        run: |
+          echo "::warning::Open-Meteo remained unavailable after all retries. Keeping the last verified weather context; the app will mark it as stale after 12 hours."
 
       - name: Validate data
         run: npm run validate:data
